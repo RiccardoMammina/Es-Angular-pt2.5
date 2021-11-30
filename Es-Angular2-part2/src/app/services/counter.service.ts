@@ -8,21 +8,20 @@ export class CounterService {
 
   constructor() { }
 
-  getValue(): number {
-    return this.counter;
-  }
-
-  increseCounter(value: number = 1): number {
-    return this.counter + value;
-  }
-
-  decreseCounter(value: number = 1): number {
-    return this.counter - value;
-  }
-
-  errorCounter() {
-    if (this.counter < 0) {
-      console.error('Counter non può essere negativo')
+  getValue(): number | void {
+    if (this.counter >= 0) {
+      return this.counter;
+    } else
+      console.error('can not be negative')
     }
+
+  increseCounter(value: number = 1) {
+   this.counter = this.counter + value;
+   console.log(this.counter);
+  }
+
+  decreseCounter(value: number = 1) {
+   this.counter = this.counter - value;
+   console.log(this.counter);
   }
 }

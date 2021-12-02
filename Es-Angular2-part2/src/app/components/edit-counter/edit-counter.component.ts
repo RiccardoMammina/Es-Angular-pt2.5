@@ -7,7 +7,7 @@ import { CounterService } from 'src/app/services/counter.service';
   styleUrls: ['./edit-counter.component.scss']
 })
 export class EditCounterComponent implements OnInit {
-  public counterValue?:number;
+  public counterValue!:number;
   constructor(public counter: CounterService) { }
 
   ngOnInit(): void {

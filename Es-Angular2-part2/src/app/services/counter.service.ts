@@ -15,13 +15,13 @@ export class CounterService {
       return 'can not be negative'
     }
 
-  increseCounter(value: number = 1) {
-   this.counter = this.counter + +value;
+  increseCounter(value: number) {
+    this.counter = value ? (this.counter + +value) : (this.counter + 1);
    console.log(this.counter);
   }
 
-  decreseCounter(value: number = 1) {
-   this.counter = this.counter - value;
+  decreseCounter(value: number) {
+    this.counter = value ? (this.counter - value) : (this.counter - 1);
    console.log(this.counter);
   }
 }

@@ -10,7 +10,7 @@ export class CounterService {
 
   getValue(): number | void {
     if (this.counter >= 0) {
-      return this.counter;
+      console.log(this.counter);
     } else
       console.error('can not be negative')
     }

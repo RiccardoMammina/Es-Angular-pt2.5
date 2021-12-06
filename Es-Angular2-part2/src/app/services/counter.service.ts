@@ -3,4 +3,25 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CounterService {}
+export class CounterService {
+  private counter:number = 0;
+
+  constructor() { }
+
+  getValue() {
+    if (this.counter >= 0) {
+      return this.counter;
+    } else
+      return 'can not be negative'
+    }
+
+  increseCounter(value: number) {
+    this.counter = value ? (this.counter + +value) : (this.counter + 1);
+   console.log(this.counter);
+  }
+
+  decreseCounter(value: number) {
+    this.counter = value ? (this.counter - value) : (this.counter - 1);
+   console.log(this.counter);
+  }
+}
